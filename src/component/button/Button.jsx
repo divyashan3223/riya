@@ -1,19 +1,10 @@
 import dog from "../../assests/dog.webp";
 
-export const Button = () => {
-  return <button>download my dog image</button>;
-};
-
 const Heading = () => {
-
-  const design={ backgroundColor: "red", fontSize: "40px" ,textTransform:"capitalize"}
   return (
     <div>
-      <h1 style={design}>
-        this is my dog
-      </h1>
-      <img src={dog} alt="" style={{height:"200px"}} />
-      <Button />
+      <h1>my dog image</h1>
+      <img src={dog} alt="" />
     </div>
   );
 };
