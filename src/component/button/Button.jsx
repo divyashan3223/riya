@@ -1,24 +1,15 @@
-import "./button.css"
-
-
- export const Head = () => {
-  return (
-<h1>button component</h1>
-  )
-}
-
-export const Para=()=>{
-    return(
-        <p>this is a button component</p>
-    )
-}
-
-
-function Button() {
+export const Button = () => {
   return <button>submit</button>;
-}
-export default Button;
+};
 
+const Heading = () => {
+  return (
+    <h1>
+      <Button/>
+      i'm a heading
+      <Button />
+    </h1>
+  );
+};
 
-
-
+export default Heading;

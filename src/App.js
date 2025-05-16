@@ -1,14 +1,12 @@
 import "./App.css";
-
-import Button, { Head, Para } from "./component/button/Button";
+import Heading from "./component/button/Button";
+// import {Button } from "./component/button/Button";
 
 function App() {
   return (
     <div className="App">
-     
-      <Head/>
-      <Para/>
-       <Button />
+      {/* <Button/> */}
+      <Heading />
     </div>
   );
 }
