@@ -1,12 +1,10 @@
 import "./App.css";
-import Heading from "./component/button/Button";
-// import {Button } from "./component/button/Button";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      {/* <Button/> */}
-      <Heading />
+      <Home />
     </div>
   );
 }
