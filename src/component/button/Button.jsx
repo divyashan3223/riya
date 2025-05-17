@@ -1,43 +1,37 @@
-let person = {
-  name: "riya",
-  age: 50,
-  image:
-    "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=300",
-};
+// import "./button.css"
 
-const Heading = () => {
-  let style = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-    height: "100vh",
-    border: "10px solid black",
-  };
-  const main = {
-    border: "5px dashed green",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-  };
+// const Button = () => {
+//   const handleClick=()=>{
+//     alert("hello world")
+//   }
+//   return (
+//     <div>
+//       <h1>click the button show new sms</h1>
+//       {/* <button onClick={()=>{handleClick()}}>click me</button> */}
+//       <button onClick={handleClick}>click me</button>
+//     </div>
+//   );
+// };
+
+// export default Button;
+
+const datas = [
+  { title: "apple", isFruit: true, quantity: 10, id: 1 },
+  { title: "mango", isFruit: true, quantity: 3, id: 2 },
+  { title: "potato", isFruit: false, quantity: 10, id: 3 },
+  { title: "apple", isFruit: false, quantity: 2, id: 4 },
+];
+
+const Button = () => {
   return (
-    <div style={style}>
-      <main style={main}>
-        <h1>name:{person.name}</h1>
-        <img
-          src={person.image}
-          alt=""
-          style={{
-            height: "person.age",
-            width: "person.age",
-            borderRadius: "100px",
-          }}
-        />
-        <h2>age:{person.age}</h2>
-      </main>
+    <div>
+      <ul>
+        {datas.map((item) => {
+          return <li key={item.id}>{item.title}</li>;
+        })}
+      </ul>
     </div>
   );
 };
 
-export default Heading;
+export default Button;

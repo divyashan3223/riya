@@ -1,22 +1,7 @@
-img {
-  height: 350px;
-  width: 350px;
-  border-radius: 250px;
-}
-h1 {
-  font-size: 40px;
-  text-transform: uppercase;
-}
 button {
-  display: block;
-}
-#head{
-    background-color: blue;
-}
-.head{
-    color: white;
-    text-align: center;
-}
-.container{
- text-align: center;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 20px;
 }
