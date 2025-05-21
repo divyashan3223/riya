@@ -8,8 +8,8 @@
 //   cursor: "pointer",
 //   marginLeft: "10px",
 // };
-const Button = ({ data,bgClor,clr }) => {
-  return <button style={{ backgroundColor:bgClor,color:clr}}>{data}</button>;
+const Button = (prop) => {
+  return <button style={{ backgroundColor:prop.bgClor,color:prop.clr}}>{prop.data}</button>;
 };
 
 export default Button;
