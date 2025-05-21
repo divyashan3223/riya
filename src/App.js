@@ -5,9 +5,9 @@ import Button from "./component/button/Button";
 function App() {
   return (
     <div className="App">
-      <Button  data={'add to cart'}/>
-      <Button data={'cancel'} />
-      <Button data={'submit'} />
+      <Button  data={'add to cart'} bgClor={"red"}/>
+      <Button data={'cancel'} bgClor={"yellow"} />
+      <Button data={'submit'} clr={"red"} />
     </div>
   );
 }
