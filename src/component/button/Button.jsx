@@ -1,15 +1,9 @@
-// const style = {
-//   backgroundColor: "red",
-//   color: "white",
-//   padding: "10px",
-//   outline: "none",
-//   border: "none",
-//   borderRadius: "5px",
-//   cursor: "pointer",
-//   marginLeft: "10px",
-// };
-const Button = (prop) => {
-  return <button style={{ backgroundColor:prop.bgClor,color:prop.clr}}>{prop.data}</button>;
+const Button = ({content="data"}) => {
+  return (
+    <div >
+      <button>{content}</button>
+    </div>
+  );
 };
 
 export default Button;

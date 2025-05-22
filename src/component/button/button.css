@@ -1,7 +1,12 @@
-button {
+.add {
   background-color: red;
   color: white;
+  padding: 3px 10px;
+}
+.cancel {
+  background-color: yellow;
+  color: blue;
   border: none;
-  padding: 20px;
-  border-radius: 20px;
+  outline: none;
+  padding: 1vw 20px;
 }
