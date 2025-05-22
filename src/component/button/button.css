@@ -4,7 +4,7 @@
   border: none;
   padding: 10px;
 }
-.sub{
+.sub {
   background-color: red;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }

@@ -1,9 +1,11 @@
-import './button.css'
+import "./button.css";
 
-const Button = ({content,clsName}) => {
+const Button = ({ content, bgRadius }) => {
   return (
-<button className={clsName} >{content}</button>
-  )
-}
+    <button style={{ borderRadius: bgRadius != null ? bgRadius : "" }}>
+      {content}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
