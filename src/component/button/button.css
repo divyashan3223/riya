@@ -1,12 +1,10 @@
-.add {
-  background-color: red;
-  color: white;
-  padding: 3px 10px;
-}
-.cancel {
-  background-color: yellow;
-  color: blue;
+.login {
+  background-color: blue;
+  color: wheat;
   border: none;
-  outline: none;
-  padding: 1vw 20px;
+  padding: 10px;
+}
+.sub{
+  background-color: red;
+  border-radius: 20px;
 }
