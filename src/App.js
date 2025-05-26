@@ -1,10 +1,10 @@
 import "./App.css";
-import Button from "./component/button/Button";
+import UseEffect from "./component/hooks/UseEffect";
 
 function App() {
   return (
     <div className="App">
-      <Button />
+      <UseEffect />
     </div>
   );
 }

@@ -4,7 +4,7 @@
 //   let handleClick=()=>{
 //     count+=1
 //     console.log(count);
-    
+
 //   }
 //   return(
 
@@ -18,20 +18,15 @@
 
 // export default Button;
 
-
-
-
-
-
+import { useState } from "react";
 
 const Button = () => {
-
   const [count, setCount] = useState(10);
 
   let handleClick = () => {
     setCount(count + 1);
     setCount((count = count + 1));
-    
+
     setCount((c) => c + 1);
   };
   return (
