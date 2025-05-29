@@ -1,54 +1,36 @@
-import Login from "./Login";
-import Signup from "./Signup";
+import Child2 from "../component/Child2";
+import Child1 from "../component/Child1";
+import Footer from "../component/Footer";
+import NavBar from "../component/NavBar";
+import { useState } from "react";
 
-// !using ternary operator
-
-// const Home = () => {
-//   let isLogin = false;
-//   return (
-//     <div>
-//       <h1>Home</h1>
-//       {isLogin ? (
-//         <div>
-//           <h2>Welcome back</h2>
-//           <Login />
-//         </div>
-//       ) : (
-//         <div>
-//           <h2>Please login</h2>
-//           <Signup />
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Home;
-
-// !using if else statement
-
-// const Home = () => {
-//   let isLogin = true;
-//   let content;
-//   if (isLogin) {
-//     content = <Login />;
-//   } else {
-//     content = <Signup />;
-//   }
-//   return <div>{content}</div>;
-// };
-
-// export default Home;
-
-// !&&
 const Home = () => {
-  let isLogin = true;
+  console.log("home page running");
+
+  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    setCount(count + 1);
+  };
   return (
-    <div>
-      <h1>Home</h1>
-      {isLogin && <Login />}
-  
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "98vh",
+        justifyContent: "space-between",
+      }}
+    >
+      <NavBar />
+
+      <h1>count:{count}</h1>
+      <button onClick={handleClick}>click</button>
+
+      <Child1 data={count} />
+      <Child2 />
+
+      <Footer />
     </div>
   );
 };
-export  default Home;
+
+export default Home;

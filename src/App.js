@@ -1,10 +1,10 @@
 import "./App.css";
-import UseEffect from "./component/hooks/UseEffect";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <UseEffect />
+      <Home />
     </div>
   );
 }
