@@ -1,37 +1,45 @@
-import Child2 from "../component/Child2";
-import Child1 from "../component/Child1";
-import Footer from "../component/Footer";
-import NavBar from "../component/NavBar";
-import { useCallback, useState } from "react";
+import React from "react";
+import { useState, useMemo } from "react";
 
 const Home = () => {
-  console.log("home page running");
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
+  // const calculation =expensiveCalculation(count)
+  const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(10);
-  const handleClick1 = useCallback(() => {
-    setCount1(count1 + 1);
-  }, [count1]);
-  const handleClick2 = useCallback(() => {
-    setCount2(count2 + 1);
-  }, [count2]);
+  const increment = () => {
+    setCount((c) => c + 1);
+  };
+  const addTodo = () => {
+    setTodos((t) => [...t, "New Todo"]);
+  };
+
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        height: "98vh",
-        justifyContent: "space-between",
-      }}
-    >
-      <NavBar />
-
-      <Child1 title={count1} click={handleClick1} />
-      <Child2 title={count2} click={handleClick2} />
-
-      <Footer />
+    <div>
+      <div>
+        <h2>My Todos</h2>
+        {todos.map((todo, index) => {
+          return <p key={index}>{todo}</p>;
+        })}
+        <button onClick={addTodo}>Add Todo</button>
+      </div>
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+        <h2>Expensive Calculation</h2>
+        {calculation}
+      </div>
     </div>
   );
+};
+
+const expensiveCalculation = (num) => {
+  console.log("Calculating...");
+  for (let i = 0; i < 1000000000; i++) {
+    num += 1;
+  }
+  return num;
 };
 
 export default Home;

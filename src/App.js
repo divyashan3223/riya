@@ -1,10 +1,10 @@
 import "./App.css";
-import Home from "./pages/Home";
+import { Parent } from "./component/hooks/usecontext/Parent";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Parent   />
     </div>
   );
 }
