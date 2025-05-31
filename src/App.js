@@ -1,12 +1,12 @@
 import "./App.css";
-import Counter from "./component/hooks/useReducer";
-import Form from "./component/hooks/useRef/UseRef";
-// import Counter from "./component/hooks/useRef/UseRef";
+import Todos from "./component/hooks/customHook/Todos";
+import Posts from "./component/hooks/UseEffect";
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Posts />
+      <Todos />
     </div>
   );
 }

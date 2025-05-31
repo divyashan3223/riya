@@ -1,21 +1,22 @@
 // fetch('api')
 //
 
-import { useEffect } from "react";
-import { useState } from "react";
+import UseFetch from "./customHook/UseFetch";
 
-const UseEffect = () => {
+const Posts = () => {
+  let [title] = UseFetch("https://jsonplaceholder.typicode.com/posts");
 
-    const[title,setTitle]=useState('')
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((data) => data.map((item) => setTitle(item.title)));
-  });
-  return <div>
-    <h1>title{title}</h1>
-  </div>;
+  return (
+    <div>
+      <h1>posts title</h1>
+      <ul>
+        {title &&
+          title.map((item, index) => {
+            return <li id={index}>{item.title}</li>;
+          })}
+      </ul>
+    </div>
+  );
 };
 
-
-export default UseEffect;
+export default Posts;
