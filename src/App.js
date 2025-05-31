@@ -1,10 +1,12 @@
 import "./App.css";
-import { Parent } from "./component/hooks/usecontext/Parent";
+import Counter from "./component/hooks/useReducer";
+import Form from "./component/hooks/useRef/UseRef";
+// import Counter from "./component/hooks/useRef/UseRef";
 
 function App() {
   return (
     <div className="App">
-      <Parent   />
+      <Counter />
     </div>
   );
 }
