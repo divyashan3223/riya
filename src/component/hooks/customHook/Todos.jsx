@@ -1,17 +1,15 @@
-import { useEffect } from "react";
-import { useState } from "react";
 import UseFetch from "./UseFetch";
 
 const Todos = () => {
+  const [todos] = UseFetch("https://jsonplaceholder.typicode.com/todos");
 
-  let [title] = UseFetch("https://jsonplaceholder.typicode.com/todos");
   return (
     <div>
-      <h1>todos title</h1>
+      <h1>Todos Title</h1>
       <ul>
-        { title && title.map((item, index) => {
-          return <li id={index}>{item.title}</li>;
-        })}
+        {todos?.map((todo) => (
+          <li key={todo.id}>{todo.title}</li>
+        ))}
       </ul>
     </div>
   );
